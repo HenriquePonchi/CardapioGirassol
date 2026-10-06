@@ -1,0 +1,84 @@
+PESQUEIRO GIRASSOL — CARDÁPIO ONLINE
+=====================================
+
+O que tem nesta pasta
+----------------------
+- index.html    -> estrutura da página
+- style.css     -> visual do site (cores, fontes, layout)
+- script.js     -> cardápio, busca, carrinho e envio para o WhatsApp
+- img/          -> logo em alta e ícones do site
+- LEIA-ME.txt   -> este arquivo
+
+Como usar
+---------
+1. Abra o arquivo "index.html" (duplo clique) para testar no seu
+   computador, ou envie a pasta inteira para quem for publicar o site.
+   Não apague nem renomeie a pasta "img".
+
+2. IMPORTANTÍSSIMO — Configure o número do WhatsApp:
+   Abra o arquivo "script.js" em qualquer editor de texto (Bloco de
+   Notas, Notepad++, VS Code, etc.) e troque a linha abaixo, perto do
+   topo do arquivo, pelo número real do pesqueiro:
+
+       const WHATSAPP_NUMBER = "5513996341796"; // <-- TROQUE AQUI
+
+   Formato correto: DDI (55 para Brasil) + DDD + número, só números,
+   sem espaços, sem "+", sem traço.
+   Exemplo: WhatsApp (13) 99999-9999  vira  "5513999999999"
+
+O que mudou nesta versão
+--------------------------
+- Visual novo, com o pôr do sol e as cores da logo do pesqueiro,
+  peixe animado e transições suaves, pensado para vender mais.
+- Busca instantânea no topo — o cliente digita "tilápia" ou
+  "cerveja" e já vê o resultado.
+- Seção de "Destaques da casa" com os pratos mais pedidos.
+- Cada item abre uma ficha própria (foto/ícone grande, descrição,
+  escolha de tamanho e quantidade) antes de ir pro carrinho.
+- Sugestões de "pedir também" dentro do carrinho (upsell).
+- O carrinho fica salvo no aparelho do cliente: se ele fechar a
+  aba sem querer, o pedido continua lá ao voltar.
+- Totalmente reformulado para celular: barra de pedido fixa embaixo,
+  telas que deslizam com o dedo, botões grandes e fáceis de tocar.
+
+Como funciona para o cliente
+-----------------------------
+1. O cliente busca ou navega pelas categorias (Bebidas, Porções,
+   Lanches, etc.), ou desliza pelos Destaques da casa.
+2. Ao tocar em um item, abre uma ficha com a descrição. Em itens
+   com Meia/Inteira, ele escolhe o tamanho e a quantidade ali.
+3. O item vai para o carrinho (o botão no topo mostra a contagem).
+4. No carrinho, dá pra ajustar quantidades, ver sugestões de itens
+   para completar o pedido, e depois preencher Nome e sobrenome,
+   Local (mesa ou local do pesqueiro) e uma Observação (opcional).
+5. Ao tocar em "Enviar pedido pelo WhatsApp", abre o WhatsApp já
+   com uma mensagem pronta contendo todos os itens, quantidades,
+   valores e o total — só falta o cliente apertar em enviar.
+
+Como colocar o site no ar (opcional)
+--------------------------------------
+Esse cardápio é feito só em HTML, CSS e JavaScript, então pode ser
+hospedado gratuitamente em serviços como:
+- Netlify (netlify.com) — arraste a pasta e pronto
+- Vercel (vercel.com)
+- GitHub Pages (pages.github.com)
+
+Depois disso, é só gerar um QR Code com o link do site e colocar nas
+mesas do pesqueiro.
+
+Personalização rápida
+-----------------------
+- Itens, preços e descrições: edite o array MENU no início do
+  arquivo script.js. Cada categoria tem um "hue" (0–360) que
+  define a cor dos ícones daquela seção.
+- Destaques da casa: edite a lista FEATURED_REFS em script.js —
+  basta citar a categoria e o nome exato do item.
+- Cores e fontes: edite as variáveis no topo do arquivo style.css
+  (bloco ":root").
+- Logo do topo: troque o arquivo img/logo.png (fundo do hero) e
+  img/logo-sm.png (cabeçalho/rodapé) por uma versão sua, mantendo
+  os mesmos nomes de arquivo.
+
+Qualquer item ou preço que precise ajustar, é só editar o texto
+diretamente dentro do array MENU em script.js — não precisa mexer no
+restante do código.
